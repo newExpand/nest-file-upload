@@ -23,6 +23,6 @@ export class AppController {
   fileUpload(@UploadedFile() file: Express.Multer.File) {
     console.log(file);
 
-    return 'File Upload';
+    return `${file.originalname} File Uploaded Check http://localhost:3000/uploads/${file.filename}`;
   }
 }
